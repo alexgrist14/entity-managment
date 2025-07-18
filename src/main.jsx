@@ -9,7 +9,7 @@ import EditCompanyPage from "./pages/EditCompanyPage.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.PROD ? "/entity-managment/" : "/"}>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/companies" element={<CompanyListPage />} />

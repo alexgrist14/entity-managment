@@ -3,13 +3,14 @@ import { Link } from "react-router";
 import Button from "../shared/ui/Button/Button";
 import Table from "../shared/ui/Table/Table";
 import axios from "axios";
+import { API_URL } from "../shared/utils/api";
 
 const CompanyListPage = () => {
   const [companies, setCompanies] = useState([]);
 
   useEffect(() => {
     axios
-      .get("http://localhost:3111/api/companies")
+      .get(`${API_URL}/companies`)
       .then((res) => setCompanies(res.data))
       .catch((err) => {
         console.error("Failed to fetch companies:", err);

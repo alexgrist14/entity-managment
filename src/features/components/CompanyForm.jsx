@@ -11,6 +11,7 @@ import Error from "../../shared/ui/Error/Error";
 import Radio from "../../shared/ui/Radio/Radio";
 import Dropdown from "../../shared/ui/Dropdown/Dropdown";
 import axios from "axios";
+import { API_URL } from "../../shared/utils/api";
 
 const schema = yup.object({
   name: yup.string().required("Name is required"),
@@ -72,7 +73,7 @@ const CompanyForm = ({ mode, companyId }) => {
   useEffect(() => {
     if (mode === "edit" && companyId) {
       axios
-        .get(`http://localhost:3111/api/companies/${companyId}`)
+        .get(`${API_URL}/companies/${companyId}`)
         .then((res) => {
           const { id: _, ...parsedData } = res.data;
           reset({
@@ -120,8 +121,8 @@ const CompanyForm = ({ mode, companyId }) => {
     const method = mode === "edit" ? "PATCH" : "POST";
     const url =
       mode === "edit"
-        ? `http://localhost:3111/api/companies/${companyId}`
-        : "http://localhost:3111/api/companies";
+        ? `${API_URL}/companies/${companyId}`
+        : `${API_URL}/companies`;
 
     await axios({
       method,

@@ -1,0 +1,31 @@
+.button {
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.button_accent {
+  color: white;
+  background-color: rgb(78, 78, 230);
+}
+
+.button_edit {
+  color: white;
+  background-color: rgb(100, 179, 48);
+}
+
+.button:hover,
+.button:focus-visible,
+.button_active {
+  filter: brightness(1.2);
+}
+
+.button:active {
+  filter: contrast(0.8);
+}
+
+.button:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}

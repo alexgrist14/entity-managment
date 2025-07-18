@@ -1,0 +1,22 @@
+.input {
+  padding-inline: 10px;
+  border-radius: 5px;
+  height: 40px;
+  width: 100%;
+  background-color: #262c36;
+  border: 1px solid transparent;
+  transition: border 0.2s;
+}
+
+.input:hover,
+.input:focus-visible {
+  border-color: black;
+}
+
+.input:focus {
+  border-color: rgb(47, 126, 216);
+}
+
+.input input[type="radio"] {
+  display: none;
+}

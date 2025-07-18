@@ -1,0 +1,28 @@
+.form {
+  display: grid;
+  width: fit-content;
+  gap: 10px;
+  margin-inline: auto;
+}
+
+.form__wrapper {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.form__task {
+    display: grid;
+    gap: 4px;
+    width: 100%;
+}
+
+.form__status {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    gap: 4px;
+}
+
+.link{
+margin: 20px 0 20px 0;
+}
